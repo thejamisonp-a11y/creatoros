@@ -31,7 +31,8 @@ JWT_ALGORITHM = "HS256"
 JWT_EXPIRATION_HOURS = 24
 
 # Encryption Key (32 bytes for AES-256)
-ENCRYPTION_KEY = os.environ.get('ENCRYPTION_KEY', 'talentos32byteencryptionkey!!')[:32].encode()
+_raw_key = os.environ.get('ENCRYPTION_KEY', 'talentos32byteencryptionkey!@#$')
+ENCRYPTION_KEY = (_raw_key + '0' * 32)[:32].encode()  # Ensure exactly 32 bytes
 
 # Create the main app
 app = FastAPI(title="fleshsesh TalentOS API")
