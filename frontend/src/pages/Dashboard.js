@@ -99,9 +99,15 @@ export default function Dashboard() {
   return (
     <div className="space-y-6 animate-fade-in" data-testid="dashboard">
       {/* Header */}
-      <div>
-        <h1 className="text-3xl font-bold">Control Room</h1>
-        <p className="text-muted-foreground mt-1">Overview of operations and risk status</p>
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div>
+          <h1 className="text-3xl font-bold bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text">Control Room</h1>
+          <p className="text-muted-foreground mt-1">Overview of operations and risk status</p>
+        </div>
+        <div className="flex items-center gap-2 text-sm text-muted-foreground">
+          <div className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></div>
+          <span>All systems operational</span>
+        </div>
       </div>
 
       {/* Stats Grid - Bento Style */}
