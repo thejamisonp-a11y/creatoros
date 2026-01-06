@@ -10,6 +10,8 @@ import { Shield, Eye, EyeOff } from 'lucide-react';
 
 const LOGO_URL = "https://customer-assets.emergentagent.com/job_creatorhub-146/artifacts/njlys9fn_ChatGPT%20Image%20Oct%202%2C%202025%2C%2008_06_35%20AM.png";
 
+const BG_IMAGE = "https://images.pexels.com/photos/18545023/pexels-photo-18545023.jpeg";
+
 const roles = [
   { value: 'owner', label: 'Owner / Principal' },
   { value: 'ops_director', label: 'Ops Director' },
@@ -49,8 +51,15 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-background flex items-center justify-center p-4">
-      <div className="w-full max-w-md space-y-8 animate-fade-in">
+    <div className="min-h-screen bg-background flex items-center justify-center p-4 relative overflow-hidden">
+      {/* Background with subtle gradient overlay */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center opacity-10"
+        style={{ backgroundImage: `url(${BG_IMAGE})` }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/5" />
+      
+      <div className="w-full max-w-md space-y-8 animate-fade-in relative z-10">
         {/* Logo */}
         <div className="text-center">
           <img 
