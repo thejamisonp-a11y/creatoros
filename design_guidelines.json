@@ -1,0 +1,124 @@
+{
+  "identity": {
+    "name": "fleshsesh TalentOS",
+    "vibe": "Cyberpunk Control Room",
+    "emotional_tone": "Private, Secure, Efficient, High-Stakes",
+    "archetype": "Electric & Neon (Future, Speed, Disruption)",
+    "logo_colors": {
+      "background": "#000000",
+      "accent": "#D81B60"
+    }
+  },
+  "typography": {
+    "headings": {
+      "family": "Chivo, sans-serif",
+      "weights": ["700", "900"],
+      "usage": "Page titles, widget headers, KPIs",
+      "letter_spacing": "tracking-tight"
+    },
+    "body": {
+      "family": "Outfit, sans-serif",
+      "weights": ["300", "400", "500"],
+      "usage": "General text, tables, forms"
+    },
+    "mono": {
+      "family": "JetBrains Mono, monospace",
+      "weights": ["400"],
+      "usage": "IDs, timestamps, code snippets, financial data"
+    }
+  },
+  "colors": {
+    "palette": {
+      "background": "#09090b",
+      "foreground": "#fafafa",
+      "card": "#121214",
+      "card_foreground": "#fafafa",
+      "popover": "#121214",
+      "popover_foreground": "#fafafa",
+      "primary": "#D81B60",
+      "primary_foreground": "#ffffff",
+      "secondary": "#27272a",
+      "secondary_foreground": "#fafafa",
+      "muted": "#27272a",
+      "muted_foreground": "#a1a1aa",
+      "accent": "#D81B60",
+      "accent_foreground": "#ffffff",
+      "destructive": "#7f1d1d",
+      "destructive_foreground": "#fef2f2",
+      "border": "#27272a",
+      "input": "#27272a",
+      "ring": "#D81B60"
+    },
+    "gradients": {
+      "glow": "linear-gradient(135deg, #D81B60 0%, #880E4F 100%)",
+      "surface": "linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0) 100%)"
+    }
+  },
+  "layout": {
+    "grid_system": "Bento Grid (Mode B: Control Room)",
+    "spacing": "Generous (p-6 to p-12)",
+    "container": "Fluid with max-width constraints for readability",
+    "sidebar": {
+      "width": "w-64",
+      "behavior": "Fixed, collapsible",
+      "style": "Border-r border-border bg-card/50 backdrop-blur-xl"
+    }
+  },
+  "components": {
+    "cards": {
+      "style": "Flat, 1px border (border-border), no shadow",
+      "hover": "border-primary/50 transition-colors duration-300",
+      "content_padding": "p-6"
+    },
+    "buttons": {
+      "primary": "bg-primary text-primary-foreground hover:bg-primary/90 rounded-md font-medium shadow-[0_0_15px_rgba(216,27,96,0.3)]",
+      "secondary": "bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-md",
+      "ghost": "hover:bg-accent hover:text-accent-foreground"
+    },
+    "inputs": {
+      "style": "bg-input/50 border-transparent focus:border-primary focus:ring-1 focus:ring-primary rounded-md"
+    },
+    "status_indicators": {
+      "active": "bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.4)]",
+      "risk": "bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.4)]",
+      "pending": "bg-amber-500 shadow-[0_0_8px_rgba(245,158,11,0.4)]"
+    }
+  },
+  "visual_enhancers": {
+    "glassmorphism": "backdrop-blur-xl bg-black/40 border border-white/10",
+    "borders": "1px solid rgba(255,255,255,0.08)",
+    "shadows": "None for cards, Glows for active elements",
+    "textures": "Subtle noise overlay on background (opacity 0.02)"
+  },
+  "image_urls": {
+    "avatars": [
+      "https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg",
+      "https://images.pexels.com/photos/32160350/pexels-photo-32160350.jpeg"
+    ],
+    "backgrounds": [
+      "https://images.pexels.com/photos/18545023/pexels-photo-18545023.jpeg",
+      "https://images.pexels.com/photos/8108716/pexels-photo-8108716.jpeg",
+      "https://images.pexels.com/photos/247676/pexels-photo-247676.jpeg"
+    ],
+    "logo": "https://customer-assets.emergentagent.com/job_creatorhub-146/artifacts/7whp2jlz_fleshsesh-high-resolution-logo-transparent.png"
+  },
+  "instructions_to_main_agent": [
+    "UPDATE /app/frontend/src/index.css with the new color palette defined in 'colors.palette'. Ensure CSS variables match the Shadcn convention (HSL values).",
+    "INSTALL fonts: Chivo, Outfit, JetBrains Mono via Google Fonts in index.html or CSS import.",
+    "USE 'lucide-react' for all icons.",
+    "IMPLEMENT the 'Bento Grid' layout for the Dashboard Overview.",
+    "ENSURE all interactive elements have 'data-testid' attributes.",
+    "USE 'sonner' for notifications.",
+    "STRICTLY FOLLOW the 'Dark Mode' requirement. No light mode toggle needed (force dark).",
+    "USE the provided logo URL for the sidebar header.",
+    "CREATE a 'Layout' component that includes the Sidebar and Topbar, wrapping all page content."
+  ],
+  "universal_guidelines": [
+    "Do not use gradients for backgrounds, use solid dark colors with subtle noise.",
+    "Use magenta (#D81B60) sparingly for high-priority actions only.",
+    "Ensure high contrast for text (White on Dark Gray).",
+    "Avoid 'Inter' font for headings; use 'Chivo'.",
+    "Use 'Outfit' for body text.",
+    "Make sure all containers with borders have internal padding (p-6+)."
+  ]
+}
